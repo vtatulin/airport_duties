@@ -1,14 +1,15 @@
 """
 worker duties
 """
+from dataclasses import dataclass
 
 
+@dataclass
 class WDuty():
-    def __init__(self, start: int, display_h: int, duration: int = 1):
-        self.display_h = display_h  ## для красоты визуализации
-        self.start = start
-        self.finished = False
-        self.duration = duration
+    start: int
+    display_h: int
+    duration: int = 1
+    finished: bool = False
 
     def prolongate(self):
         self.duration += 1

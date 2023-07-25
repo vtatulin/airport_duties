@@ -21,15 +21,11 @@ def calculate_schedule_n_plot():
 
     duties_sum = sum(_.duration for _ in worker_duties)
     work_sum = sum(duty)
-    title = f"""Duties visualisation
-    duties: {duties_sum} man*duty
-    work ammount: {work_sum}
-    ratio: {round(100 * duties_sum / work_sum, 2)}
-
-    """
+    title = f"""Duties: {duties_sum} man*duty;work ammount: {work_sum}
+    ratio: {round(100 * duties_sum / work_sum, 2)}    """
     plt.title(title)
     plt.show()
 
 if __name__ == '__main__':
-    calculate_schedule_n_plot
+    calculate_schedule_n_plot()
 
